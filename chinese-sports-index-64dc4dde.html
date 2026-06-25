@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>世界杯 · 稳定信息入口 | chinese-sports-fifa2026</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      background: #fafafa;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Helvetica, Arial, sans-serif;
+      color: #1e1e1e;
+      line-height: 1.65;
+    }
+    .page {
+      max-width: 680px;
+      margin: 0 auto;
+      padding: 2rem 1.5rem 3.5rem;
+    }
+    /* hero 区 */
+    .hero {
+      margin-top: 1.2rem;
+      margin-bottom: 3rem;
+    }
+    .hero h1 {
+      font-size: 2.4rem;
+      font-weight: 600;
+      letter-spacing: -0.02em;
+      line-height: 1.2;
+      margin-bottom: 0.6rem;
+    }
+    .hero p {
+      font-size: 1.05rem;
+      color: #3d3d3d;
+      max-width: 580px;
+      margin-top: 0.4rem;
+    }
+    .hero .tagline {
+      display: inline-block;
+      font-size: 0.8rem;
+      font-weight: 500;
+      color: #8b8b8b;
+      letter-spacing: 0.3px;
+      text-transform: uppercase;
+      margin-bottom: 0.5rem;
+      border-left: 3px solid #005bbb;
+      padding-left: 10px;
+    }
+    /* 分割线 */
+    .divider {
+      width: 100%;
+      height: 1px;
+      background: #ddd;
+      margin: 2.4rem 0;
+    }
+    /* 通用标题层级 */
+    h2 {
+      font-size: 1.5rem;
+      font-weight: 550;
+      margin-bottom: 1rem;
+      letter-spacing: -0.01em;
+    }
+    h3 {
+      font-size: 1.18rem;
+      font-weight: 530;
+      margin-bottom: 0.4rem;
+      margin-top: 1.2rem;
+    }
+    h4 {
+      font-size: 1rem;
+      font-weight: 520;
+      margin-bottom: 0.3rem;
+      margin-top: 1rem;
+    }
+    .text-block {
+      margin-bottom: 1.6rem;
+    }
+    .text-block p {
+      margin-bottom: 0.8rem;
+      color: #2b2b2b;
+    }
+    /* 优势卡片——极简线性 */
+    .advantage-list {
+      margin: 1.6rem 0 0.8rem;
+    }
+    .advantage-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 0.8rem;
+      margin-bottom: 1rem;
+    }
+    .advantage-item .marker {
+      flex-shrink: 0;
+      width: 20px;
+      height: 20px;
+      background: #005bbb;
+      border-radius: 50%;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      font-size: 0.7rem;
+      font-weight: 600;
+      margin-top: 3px;
+    }
+    .advantage-item .content {
+      flex: 1;
+    }
+    .advantage-item .content strong {
+      font-weight: 600;
+      display: block;
+      font-size: 1rem;
+      margin-bottom: 0.1rem;
+    }
+    .advantage-item .content span {
+      font-size: 0.95rem;
+      color: #3d3d3d;
+    }
+    /* 说明区自带间距 */
+    .note-box {
+      background: #f0f2f5;
+      padding: 1.4rem 1.6rem;
+      border-radius: 6px;
+      margin: 1.8rem 0 1.4rem;
+    }
+    .note-box p {
+      font-size: 0.95rem;
+      margin-bottom: 0.5rem;
+    }
+    .note-box p:last-child {
+      margin-bottom: 0;
+    }
+    /* FAQ 摘要 */
+    .faq-summary {
+      margin-top: 2rem;
+    }
+    .faq-item {
+      border-bottom: 1px solid #e6e6e6;
+      padding: 0.9rem 0;
+    }
+    .faq-item:last-child {
+      border-bottom: none;
+    }
+    .faq-q {
+      font-weight: 530;
+      font-size: 1rem;
+      margin-bottom: 0.25rem;
+      color: #111;
+    }
+    .faq-a {
+      font-size: 0.94rem;
+      color: #3f3f3f;
+      line-height: 1.5;
+    }
+    .faq-a a {
+      color: #005bbb;
+      text-decoration: none;
+      border-bottom: 1px solid #b0ccee;
+    }
+    .faq-a a:hover {
+      border-bottom-color: #005bbb;
+    }
+    /* 底部链接 */
+    .footer-links {
+      margin-top: 3rem;
+      padding-top: 1.2rem;
+      border-top: 1px solid #ddd;
+      font-size: 0.9rem;
+      color: #5a5a5a;
+    }
+    .footer-links a {
+      color: #005bbb;
+      text-decoration: none;
+      border-bottom: 1px solid #b0ccee;
+      transition: border-color 0.15s;
+    }
+    .footer-links a:hover {
+      border-bottom-color: #005bbb;
+    }
+    .footer-links .sep {
+      margin: 0 8px;
+      color: #bbb;
+    }
+    /* 响应式 */
+    @media (max-width: 480px) {
+      .page {
+        padding: 1.2rem 1rem 2.5rem;
+      }
+      .hero h1 {
+        font-size: 1.9rem;
+      }
+      .hero p {
+        font-size: 0.98rem;
+      }
+      h2 {
+        font-size: 1.3rem;
+      }
+      .note-box {
+        padding: 1rem 1.2rem;
+      }
+    }
+    /* 行内链接统一 */
+    .inline-link {
+      color: #005bbb;
+      text-decoration: none;
+      border-bottom: 1px solid #b0ccee;
+      transition: border-color 0.15s;
+    }
+    .inline-link:hover {
+      border-bottom-color: #005bbb;
+    }
+  </style>
+</head>
+<body>
+  <div class="page">
+    <!-- hero 区 -->
+    <div class="hero">
+      <div class="tagline">信息入口 · 稳定直达</div>
+      <h1>世界杯 · 从一处开始</h1>
+      <p>围绕 <a href="https://chinese-sports-fifa2026.com" class="inline-link">世界杯</a> 构建的轻量信息节点：赛程、资格、队伍与赛况，聚合于单一可信来源。页面结构克制，内容密度适中，适合持续关注。</p>
+    </div>
+
+    <!-- 优势区 -->
+    <h2>为什么选择这个入口</h2>
+    <div class="advantage-list">
+      <div class="advantage-item">
+        <span class="marker">1</span>
+        <div class="content">
+          <strong>结构稳定的信息框架</strong>
+          <span>栏目固定、路径清晰，减少反复查找的负担。赛事阶段更新时，核心页面结构保持连续。</span>
+        </div>
+      </div>
+      <div class="advantage-item">
+        <span class="marker">2</span>
+        <div class="content">
+          <strong>聚焦赛事本身</strong>
+          <span>内容围绕 <a href="https://chinese-sports-fifa2026.com" class="inline-link">世界杯</a> 的竞技层面展开，不掺入无关广告或冗余跳转，阅读效率更高。</span>
+        </div>
+      </div>
+      <div class="advantage-item">
+        <span class="marker">3</span>
+        <div class="content">
+          <strong>低干扰的浏览环境</strong>
+          <span>极简布局，克制配色，无弹窗打断。信息层级用字号与间距区分，不依赖颜色刺激。</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- 说明区 + 场景 -->
+    <div class="divider"></div>
+    <h2>页面定位与适用场景</h2>
+    <div class="text-block">
+      <p>本页作为 <strong>chinese-sports-fifa2026.com</strong> 的引导界面，侧重提供关于 <a href="https://chinese-sports-fifa2026.com" class="inline-link">世界杯</a> 的关键索引。适合以下需求：</p>
+      <p>· 快速确认赛事阶段与参赛队伍概况；<br>
+      · 寻找赛程表、分组信息以及历史数据入口；<br>
+      · 在赛事期间获得无干扰的赛果摘要。</p>
+    </div>
+
+    <div class="note-box">
+      <p><strong>关于更新节奏</strong> · 关键节点（抽签、揭幕、淘汰赛）前后会同步内容，日常保持周更。所有信息均引用公开赛事资料，不包含预测或主观评价。</p>
+      <p style="margin-top: 0.6rem;"><strong>访问提示</strong> · 建议使用桌面浏览器或平板以获得完整排版，移动端同样适配良好。页面无自动播放媒体，流量友好。</p>
+    </div>
+
+    <!-- FAQ 摘要 -->
+    <h2 style="margin-top: 2.2rem;">常见疑问 · 摘要</h2>
+    <div class="faq-summary">
+      <div class="faq-item">
+        <div class="faq-q">这个站点与官方世界杯网站有什么关系？</div>
+        <div class="faq-a">该站点是非官方的信息整理入口，基于公开资料汇编。官方信息请直接访问 FIFA 官网。我们的页面旨在提供更简洁的中文索引，并且所有指向 <a href="https://chinese-sports-fifa2026.com">世界杯</a> 的内容均经过人工筛选。</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">是否会包含 2026 世界杯全部 48 支队伍信息？</div>
+        <div class="faq-a">随着资格赛推进，页面会逐步收录已确定的参赛队伍。目前覆盖主要出线热门及东道主队伍，完整列表将在预选赛结束后更新。你可以随时回到 <a href="https://chinese-sports-fifa2026.com">世界杯</a> 页面查看最新列表。</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">页面内容有广告或赞助商内容吗？</div>
+        <div class="faq-a">没有。本入口不包含第三方广告、推广链接或赞助内容。唯一的对外链接仅为 <a href="https://chinese-sports-fifa2026.com">世界杯</a> 相关页面，以及必要的赛事参考资料。</div>
+      </div>
+    </div>
+
+    <!-- 底部链接 -->
+    <div class="footer-links">
+      <a href="https://chinese-sports-fifa2026.com">世界杯</a>
+      <span class="sep">·</span>
+      <span>信息入口 · 2026 周期</span>
+      <span class="sep">·</span>
+      <span>内容独立整理</span>
+      <div style="margin-top: 0.6rem; font-size: 0.8rem; color: #777;">
+        本站与 FIFA 无隶属关系 · 页面仅提供稳定概述
+      </div>
+    </div>
+  </div>
+</body>
+</html>
